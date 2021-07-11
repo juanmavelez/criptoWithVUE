@@ -26,7 +26,7 @@
     <div>
       <h3>Lista de Cursos</h3>
       <p class="red" v-show="!courses.length">Aun no has realizado cursos</p>
-      <div v-show="course.length>0">
+      <div v-show="courses.length>0">
         <ol>
           <li v-for="c in courses">
             <span>{{c.title}} - {{c.time}}hs.</span>
@@ -40,6 +40,7 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script src="./index.js"></script>
 </body>
 

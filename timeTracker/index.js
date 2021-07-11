@@ -1,11 +1,12 @@
 new Vue({
   el: '#app',
-  courses: [],
-  title: '',
-  time: 0,
 
   data() {
-    return {};
+    return {
+      courses: [],
+      title: '',
+      time: 0,
+    };
   },
 
   computed: {
@@ -13,7 +14,7 @@ new Vue({
       if (!this.courses.length) {
         return 0;
       }
-      return this, courses.reduce((a, b) => a + parseInt(b.time), 0);
+      return this.courses.reduce((a, b) => a + parseInt(b.time), 0);
     },
   },
 
